@@ -1,7 +1,7 @@
-import SectionHeader from '../components/SectionHeader'
-import Reveal from '../components/Reveal'
+import SectionHeader from '../../components/SectionHeader'
+import Reveal from '../../components/Reveal'
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <section className="container-xl py-16">
       <SectionHeader title="Contact" subtitle="Tell us about your project" />

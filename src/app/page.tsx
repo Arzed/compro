@@ -5,12 +5,10 @@ import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
 import { Code2, Palette, Cpu, Smartphone, Cloud, Layers, Sparkles, ShieldCheck } from 'lucide-react'
 
-
-export default function Home() {
+export default function Page() {
   return (
     <div>
       <Hero3D />
-
       <section className="container-xl py-16">
         <SectionHeader title="Expertise" subtitle="Full-stack capabilities with robust delivery" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,64 +55,6 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-4">{e.icon}</div>
                 <h3 className="font-semibold text-lg mb-2">{e.title}</h3>
                 <p className="text-neutral-600">{e.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-xl py-16">
-        <SectionHeader title="Clients" subtitle="Trusted by leading enterprises and startups" />
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {['Helios', 'NorthPeak', 'Finova', 'Cloudia', 'Volt Labs', 'Orion'].map((c, i) => (
-            <Reveal key={c} delay={i * 50}>
-              <div className="rounded-xl border border-neutral-200 bg-white shadow-soft px-4 py-3 text-center text-neutral-700 font-semibold">
-                {c}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-xl py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { label: 'Years', value: '8+' },
-            { label: 'Projects', value: '120+' },
-            { label: 'NPS', value: '72' },
-            { label: 'Uptime', value: '99.95%' },
-          ].map((s, i) => (
-            <Reveal key={s.label} delay={i * 80}>
-              <div className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft text-center">
-                <p className="text-4xl font-extrabold mb-2">{s.value}</p>
-                <p className="text-neutral-600">{s.label}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-xl py-16">
-        <SectionHeader title="Testimonials" subtitle="What our clients say" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              quote: 'AuroraSoft shipped our platform ahead of schedule with exceptional quality.',
-              name: 'Elena Wright, VP Eng — Helios',
-            },
-            {
-              quote: 'Their design discipline and engineering rigor are second to none.',
-              name: 'Marcus Lee, CEO — NorthPeak',
-            },
-            {
-              quote: 'Security-first mindset and flawless delivery. Highly recommended.',
-              name: 'Priya Patel, CIO — Finova',
-            },
-          ].map((t, i) => (
-            <Reveal key={t.name} delay={i * 100}>
-              <div className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft">
-                <p className="text-neutral-900 text-lg mb-4">“{t.quote}”</p>
-                <p className="text-sm text-neutral-600">{t.name}</p>
               </div>
             </Reveal>
           ))}

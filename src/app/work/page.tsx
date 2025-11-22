@@ -1,10 +1,11 @@
+'use client'
+import SectionHeader from '../../components/SectionHeader'
+import ProjectCard from '../../components/ProjectCard'
+import Reveal from '../../components/Reveal'
+import { projects, Category } from '../../data/projects'
 import { useState } from 'react'
-import SectionHeader from '../components/SectionHeader'
-import ProjectCard from '../components/ProjectCard'
-import Reveal from '../components/Reveal'
-import { projects, Category } from '../data/projects'
 
-export default function Work() {
+export default function WorkPage() {
   const [filter, setFilter] = useState<Category>('All')
   const filtered = filter === 'All' ? projects : projects.filter((p) => p.category === filter)
   const categories: Category[] = ['All', 'Web', 'Mobile', 'AI', 'Cloud']

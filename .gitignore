@@ -3,9 +3,12 @@ node_modules/
 
 # Build output
 /dist/
+.next/
+.vercel/
 
 # Caches
-/.vite/
+# Remove Vite cache (no longer used)
+# /.vite/
 /.cache/
 /coverage/
 

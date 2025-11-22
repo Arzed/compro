@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Hero3D() {
   return (
     <section className="relative overflow-hidden">
@@ -11,12 +13,12 @@ export default function Hero3D() {
               We design, build, and scale secure products with a refined, minimalist aesthetic.
             </p>
             <div className="flex items-center gap-4">
-              <a href="/contact" className="px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold shadow-soft">
+              <Link href="/contact" className="px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold shadow-soft">
                 Start a project
-              </a>
-              <a href="/work" className="px-6 py-3 rounded-xl bg-neutral-100 text-neutral-900 font-semibold">
+              </Link>
+              <Link href="/work" className="px-6 py-3 rounded-xl bg-neutral-100 text-neutral-900 font-semibold">
                 View work
-              </a>
+              </Link>
             </div>
           </div>
           <div className="relative h-72 sm:h-96">

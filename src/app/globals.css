@@ -18,30 +18,17 @@
   color: transparent;
 }
 
-.soft-3d {
-  perspective: 800px;
-}
+.soft-3d { perspective: 800px; }
 
 .hero-shape {
   @apply absolute rounded-full blur-2xl;
   background: radial-gradient(closest-side, rgba(83,109,255,0.35), rgba(122,147,255,0.15), transparent 70%);
 }
 
-.container-xl {
-  @apply max-w-7xl mx-auto px-6 sm:px-8;
-}
+.container-xl { @apply max-w-7xl mx-auto px-6 sm:px-8; }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-.reveal {
-  @apply opacity-0 translate-y-4;
-}
-.reveal.in-view {
-  animation: fadeInUp .6s ease-out both;
-}
+.reveal { @apply opacity-0 translate-y-4; }
+.reveal.in-view { animation: fadeInUp .6s ease-out both; }

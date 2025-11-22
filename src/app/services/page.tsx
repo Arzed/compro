@@ -1,10 +1,10 @@
-import SectionHeader from '../components/SectionHeader'
-import ServiceCard from '../components/ServiceCard'
+import SectionHeader from '../../components/SectionHeader'
+import ServiceCard from '../../components/ServiceCard'
 import { HiOutlineCog, HiOutlineSparkles, HiOutlineShieldCheck } from 'react-icons/hi'
 import { FiCloud, FiServer, FiSmartphone } from 'react-icons/fi'
-import Reveal from '../components/Reveal'
+import Reveal from '../../components/Reveal'
 
-export default function Services() {
+export default function ServicesPage() {
   return (
     <section className="container-xl py-16">
       <SectionHeader title="Services" subtitle="Minimal, focused, outcome-driven" />

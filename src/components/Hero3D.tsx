@@ -1,8 +1,5 @@
 import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
-import localFont from 'next/font/local'
-
-const nudge = localFont({ src: '../../font/VCNudgeBoldTrial.woff', display: 'swap' })
 
 export default function Hero3D() {
   const avatarSvgs = [
@@ -18,15 +15,15 @@ export default function Hero3D() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="hero-gradient" />
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-neutral-200 shadow-soft backdrop-blur mb-6">
-            <span className="text-sm">✨ Product Engineering, Cloud DevOps, and AI — all in one</span>
+            <span className="text-sm">✨ Video Editor and Analytics, Multichannel Publishing — all in one.</span>
           </div>
-          <h1 className={`${nudge.className} text-neutral-900 font-bold tracking-tight leading-[1.02] text-5xl sm:text-6xl md:text-[5rem]`}>
-            A <span className="highlight-word text-brand-600">CREATIVE</span> SOFTWARE HOUSE
+          <h1 className="text-neutral-900 font-extrabold tracking-tight leading-[1.02] text-5xl sm:text-7xl md:text-[5.5rem]">
+            A <span className="highlight-word text-brand-600">CREATIVE</span> VIDEO CREATION AGENCY
             <br />
-            THAT BUILDS SECURE, SCALABLE PRODUCTS
+            THAT DRIVES ENGAGEMENT
           </h1>
           <p className="mt-6 text-neutral-600 text-[1.05rem]">
-            We design, build, and scale cloud‑native products with TypeScript‑first engineering, design‑led UX, and pragmatic AI.
+            We enhances businesses' ability to boost customer engagement through the integration of personalized and interactive elements into their videos.
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <div className="avatar-stack">

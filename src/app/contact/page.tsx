@@ -3,11 +3,14 @@ import Reveal from '../../components/Reveal'
 
 export default function ContactPage() {
   return (
-    <section className="container-xl py-16">
-      <SectionHeader title="Contact" subtitle="Tell us about your project" />
-      <div className="grid lg:grid-cols-2 gap-10 items-start">
+    <Reveal>
+      <section className="container-xl py-16">
         <Reveal>
-          <form className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft space-y-4">
+          <SectionHeader title="Contact" subtitle="Tell us about your project" />
+        </Reveal>
+        <div className="grid lg:grid-cols-2 gap-10 items-start" />
+          <Reveal>
+            <form className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft space-y-4">
             <div>
               <label className="block text-sm font-semibold mb-1">Name</label>
               <input type="text" className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-300" />
@@ -63,7 +66,7 @@ export default function ContactPage() {
             </Reveal>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Reveal>
   )
 }

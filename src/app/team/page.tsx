@@ -1,11 +1,18 @@
 import SectionHeader from '../../components/SectionHeader'
 import TeamCarousel from '../../components/TeamCarousel'
+import Reveal from '../../components/Reveal'
 
 export default function TeamPage() {
   return (
-    <section className="container-xl py-16">
-      <SectionHeader title="Team" subtitle="Experienced, diverse, and quality-obsessed" />
-      <TeamCarousel />
-    </section>
+    <Reveal>
+      <section className="container-xl py-16">
+        <Reveal>
+          <SectionHeader title="Team" subtitle="Experienced, diverse, and quality-obsessed" />
+        </Reveal>
+        <Reveal delay={60}>
+          <TeamCarousel />
+        </Reveal>
+      </section>
+    </Reveal>
   )
 }

@@ -21,7 +21,7 @@ export default function Reveal({ children, delay = 0, className = '' }: Props) {
           else setInView(false)
         })
       },
-      { threshold: 0.2 }
+      { threshold: [0, 0.25], root: null, rootMargin: '0px 0px -10% 0px' }
     )
     io.observe(el)
     return () => io.disconnect()

@@ -1,7 +1,6 @@
 'use client'
 import SectionHeader from '../../components/SectionHeader'
 import ProjectCard from '../../components/ProjectCard'
-import Reveal from '../../components/Reveal'
 import { projects, Category } from '../../data/projects'
 import { useState } from 'react'
 
@@ -11,11 +10,10 @@ export default function WorkPage() {
   const categories: Category[] = ['All', 'Web', 'Mobile', 'AI', 'Cloud']
 
   return (
-    <Reveal>
-      <section className="container-xl py-16">
-        <Reveal>
-          <SectionHeader title="Our Work" subtitle="A selection of recent projects" />
-        </Reveal>
+    <section className="container-xl py-16">
+      <div className="reveal">
+        <SectionHeader title="Our Work" subtitle="A selection of recent projects" />
+      </div>
         <div className="flex items-center gap-3 mb-8">
           {categories.map((c) => (
             <button
@@ -27,16 +25,13 @@ export default function WorkPage() {
             </button>
           ))}
         </div>
-        <Reveal delay={60}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80}>
-                <ProjectCard title={p.title} image={p.image} tags={p.tags} />
-              </Reveal>
-            ))}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filtered.map((p, i) => (
+          <div key={p.title} className="reveal" data-reveal-delay={`${i * 80}`}>
+            <ProjectCard title={p.title} image={p.image} tags={p.tags} />
           </div>
-        </Reveal>
-      </section>
-    </Reveal>
+        ))}
+      </div>
+    </section>
   )
 }

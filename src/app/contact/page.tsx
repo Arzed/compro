@@ -1,16 +1,14 @@
 import SectionHeader from '../../components/SectionHeader'
-import Reveal from '../../components/Reveal'
 
 export default function ContactPage() {
   return (
-    <Reveal>
-      <section className="container-xl py-16">
-        <Reveal>
-          <SectionHeader title="Contact" subtitle="Tell us about your project" />
-        </Reveal>
-        <div className="grid lg:grid-cols-2 gap-10 items-start" />
-          <Reveal>
-            <form className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft space-y-4">
+    <section className="container-xl py-16">
+      <div className="reveal">
+        <SectionHeader title="Contact" subtitle="Tell us about your project" />
+      </div>
+      <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="reveal">
+          <form className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft space-y-4">
             <div>
               <label className="block text-sm font-semibold mb-1">Name</label>
               <input type="text" className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-300" />
@@ -25,9 +23,9 @@ export default function ContactPage() {
             </div>
             <button type="submit" className="px-5 py-2.5 rounded-lg bg-neutral-900 text-white font-semibold">Send</button>
           </form>
-        </Reveal>
+        </div>
         <div className="space-y-6">
-          <Reveal>
+          <div className="reveal">
             <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-white shadow-soft">
               <iframe
                 title="Map"
@@ -40,8 +38,8 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-          </Reveal>
-          <Reveal delay={100}>
+          </div>
+          <div className="reveal" data-reveal-delay="100">
             <div className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft">
               <p className="font-semibold mb-3">Social</p>
               <div className="flex items-center gap-4 text-neutral-600">
@@ -50,23 +48,23 @@ export default function ContactPage() {
                 <a href="#" className="hover:text-neutral-900">GitHub</a>
               </div>
             </div>
-          </Reveal>
+          </div>
           <div className="grid sm:grid-cols-2 gap-6">
-            <Reveal>
+            <div className="reveal">
               <div className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft">
                 <p className="font-semibold mb-2">HQ</p>
                 <p className="text-neutral-600">120 Market St, Suite 500<br/>San Francisco, CA</p>
               </div>
-            </Reveal>
-            <Reveal delay={80}>
+            </div>
+            <div className="reveal" data-reveal-delay="80">
               <div className="rounded-2xl p-6 border border-neutral-200 bg-white shadow-soft">
                 <p className="font-semibold mb-2">Contact</p>
                 <p className="text-neutral-600">hello@aurorasoft.io<br/>+1 (415) 555 0132</p>
               </div>
-            </Reveal>
+            </div>
           </div>
         </div>
-      </section>
-    </Reveal>
+      </div>
+    </section>
   )
 }

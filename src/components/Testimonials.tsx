@@ -1,6 +1,5 @@
 "use client"
 import { useState } from 'react'
-import Reveal from './Reveal'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 type Testimonial = {
@@ -66,7 +65,7 @@ export default function Testimonials() {
     <section className="container-xl py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visible.map((t, i) => (
-          <Reveal key={t.name} delay={i * 80}>
+          <div key={t.name} className="reveal" data-reveal-delay={`${i * 80}`}>
             <div className="relative rounded-[22px] overflow-visible border border-neutral-200 text-black shadow-soft">
               <div className="absolute inset-0 opacity-30"  />
               <div className="relative p-6">
@@ -82,7 +81,7 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-          </Reveal>
+          </div>
         ))}
       </div>
       <div className="mt-8 flex items-center justify-center gap-4">

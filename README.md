@@ -1,78 +1,78 @@
-# AuroraSoft — Website Software House Premium
+# AuroraSoft — Premium Software House Website
 
-Website korporat modern untuk software house dengan gaya minimalis, profesional, dan tech-forward. Kini menggunakan Next.js (App Router) + TypeScript + Tailwind dengan komponen reusable dan animasi halus.
+Modern corporate website for a software house with a minimalist, professional, and tech-forward look. Powered by Next.js (App Router) + TypeScript + Tailwind with reusable components and subtle animations.
 
-## Fitur Utama
-- Hero 3D halus dengan glassmorphism dan elemen blob mengambang (subtle futuristic), hanya di hero
-- Animasi scroll fade-in berulang menggunakan `IntersectionObserver` (elemen akan animasi setiap masuk viewport)
-- Halaman lengkap: Home, Work (portfolio + filter kategori), Services (ikon dan copy informatif), Team (carousel avatar, center scale 1.5x), Contact (form + peta + sosial)
-- Desain premium: white space luas, tipografi besar, palet warna brand elegan, hover effects yang refined
-- Data proyek terpusat agar konsisten antar halaman
+## Features
+- Subtle 3D hero with glassmorphism and floating blobs (hero only)
+- Repeatable bottom fade-in on scroll using `IntersectionObserver`
+- Complete pages: Home, Work (portfolio + category filter), Services (icon cards), Team (avatar carousel, center scale 1.5x), Contact (form + map + socials)
+- Premium design: generous white space, large typography, refined hover effects
+- Centralized project data for consistent content across pages
 
-## Teknologi
+## Tech Stack
 - Next.js 14 (App Router), React 18, TypeScript
-- Tailwind CSS (custom theme + animasi)
-- Ikon: `lucide-react` (utama), `react-icons` (pelengkap)
+- Tailwind CSS (custom theme + animations)
+- Icons: `lucide-react` (primary), `react-icons` (supplementary)
 - Font: Inter (Google Fonts)
 
-## Menjalankan
-- Instal dependencies: `npm install`
-- Dev server: `npm run dev` lalu buka `http://localhost:3000/`
-- Build produksi: `npm run build`
-- Start produksi (local): `npm start`
+## Getting Started
+- Install dependencies: `npm install`
+- Dev server: `npm run dev` and open `http://localhost:3000/`
+- Production build: `npm run build`
+- Start production locally: `npm start`
 
-## Struktur Proyek Singkat
-- Routing: App Router di `src/app/`
+## Project Structure
+- Routing: App Router in `src/app/`
   - Home: `src/app/page.tsx`
   - Work: `src/app/work/page.tsx`
   - Services: `src/app/services/page.tsx`
   - Team: `src/app/team/page.tsx`
   - Contact: `src/app/contact/page.tsx`
-- Gaya global: `src/app/globals.css` — Tailwind layers, utilitas (`.glass`, `.hero-shape`, `.reveal`)
-- Konfigurasi Tailwind: `tailwind.config.js` — palet brand, `shadow-soft`, keyframes `float` dan `fadeInUp`
-- Data proyek: `src/data/projects.ts` — daftar proyek untuk Work & Featured Work
-- Komponen inti:
-  - `src/components/Hero3D.tsx` — panel 3D halus di hero
-  - `src/components/Reveal.tsx` — animasi scroll fade-in berulang
-  - `src/components/ProjectCard.tsx` — kartu portfolio dengan hover scale dan tags
-  - `src/components/ServiceCard.tsx` — kartu layanan minimalis dengan ikon
-  - `src/components/TeamCarousel.tsx` — carousel horizontal, avatar tengah scale 1.5x
+- Global styles: `src/app/globals.css` — Tailwind layers and utilities (`.glass`, `.hero-shape`, `.reveal`)
+- Tailwind config: `tailwind.config.js` — brand palette, `shadow-soft`, `float` and `fadeInUp` keyframes
+- Project data: `src/data/projects.ts` — shared dataset for Work & Featured Work
+- Core components:
+  - `src/components/Hero3D.tsx` — subtle hero 3D panel
+  - `src/components/Reveal.tsx` — repeatable scroll fade-in
+  - `src/components/ProjectCard.tsx` — portfolio cards with hover scale and tags
+  - `src/components/ServiceCard.tsx` — minimal service cards with icons
+  - `src/components/TeamCarousel.tsx` — horizontal avatar carousel with center scaling
 
-## Halaman
+## Pages
 - Home: `src/app/page.tsx`
 - Work: `src/app/work/page.tsx`
 - Services: `src/app/services/page.tsx`
 - Team: `src/app/team/page.tsx`
 - Contact: `src/app/contact/page.tsx`
 
-## Animasi
-- Float (blob hero): `tailwind.config.js:27` digunakan di `Hero3D.tsx:23`–`:25` via `animate-float`
-- Fade-in up (scroll reveal): `tailwind.config.js:31` alias `animation.fadeInUp` dipakai oleh `.reveal.in-view`
-- Komponen `Reveal`:
-  - Menggunakan `IntersectionObserver` dengan threshold 0.2 untuk toggle kelas `in-view`
-  - Replay animasi saat elemen keluar lalu masuk viewport lagi
-  - Contoh pakai: bungkus elemen dengan `<Reveal delay={i * 80}>...</Reveal>`
+## Animations
+- Float (hero blobs): defined in `tailwind.config.js` and used in `Hero3D.tsx`
+- Fade-in up (scroll reveal): `animation.fadeInUp` applied via `.reveal.in-view`
+- `Reveal` component:
+  - Uses `IntersectionObserver` with a `threshold` of 0.2 to toggle `in-view`
+  - Replays animation whenever the element leaves and re-enters the viewport
+  - Usage: wrap an element with `<Reveal delay={i * 80}>...</Reveal>`
 
-## Kustomisasi
-- Warna brand: ubah di `tailwind.config.js:10`–`:21`
-- Font: ubah import di `src/app/globals.css`
-- Logo & nama brand: `src/components/Navbar.tsx:6` dan footer `src/components/Footer.tsx:5`
-- Data proyek: `src/data/projects.ts` (terpakai di Work & Featured Work)
-- Tim: edit list di `src/components/TeamCarousel.tsx:10`
-- Peta: ubah `src` iframe di `src/app/contact/page.tsx`
-- Copy: semua teks mudah disesuaikan di file halaman terkait
+## Customization
+- Brand colors: edit in `tailwind.config.js`
+- Font: update imports in `src/app/globals.css`
+- Logo & brand name: `src/components/Navbar.tsx` and `src/components/Footer.tsx`
+- Projects data: `src/data/projects.ts` (consumed by Work & Featured Work)
+- Team: update list in `src/components/TeamCarousel.tsx`
+- Map: change iframe `src` in `src/app/contact/page.tsx`
+- Copy: adjust texts directly in their page files
 
-## Prinsip Aksesibilitas
-- Gunakan alt pada gambar, label pada input, dan kontras warna yang cukup
-- Hindari animasi berlebihan; animasi telah disetel halus untuk mengurangi distraksi
+## Accessibility Principles
+- Provide `alt` text on images, labels on inputs, and sufficient contrast
+- Keep animations subtle to reduce distraction
 
-## Keamanan
-- Tidak menyimpan secrets dalam repo
-- Hindari menempatkan kunci API langsung di klien; gunakan env server-side jika diperlukan
+## Security
+- Do not store secrets in the repo
+- Avoid embedding API keys in the client; use server-side env where needed
 
 ## Deploy
-- Build output berada di `.next/`
-- Deploy ideal: Vercel (native). Untuk server sendiri: `npm run build` lalu `npm start` (Node server Next.js)
+- Build output is located in `.next/`
+- Recommended hosting: Vercel (native). Self-host: `npm run build` then `npm start` (Next.js Node server)
 
-## Lisensi
-- Tambahkan lisensi sesuai kebutuhan organisasi Anda
+## License
+- Add a license according to your organization’s requirements

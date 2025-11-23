@@ -82,7 +82,7 @@ export default function Page() {
               href="/services"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-neutral-300 bg-white text-neutral-900 font-semibold hover:bg-neutral-50"
             >
-              Lihat selengkapnya
+              See More
             </Link>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Page() {
               href="/work"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-neutral-300 bg-white text-neutral-900 font-semibold hover:bg-neutral-50"
             >
-              Lihat selengkapnya
+              See More
             </Link>
           </div>
         </div>

@@ -1,14 +1,20 @@
-import './globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Script from 'next/script'
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Script from "next/script";
+import Reveal from "../components/Reveal";
+import ScrollObserver from "../components/ScrollObserver";
 
 export const metadata = {
-  title: 'AuroraSoft — Premium Tech',
-  description: 'Minimalist, professional, tech-forward software house website',
-}
+  title: "AuroraSoft — Premium Tech",
+  description: "Minimalist, professional, tech-forward software house website",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="bg-white text-neutral-900 min-h-screen flex flex-col">
@@ -37,9 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })();
           `}
         </Script>
+
+        <ScrollObserver />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }
